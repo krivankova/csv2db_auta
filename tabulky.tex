@@ -1,0 +1,19 @@
+\documentclass[2pt]{article}
+\usepackage{a4wide}
+\usepackage{longtable}
+
+\begin{document}
+
+\begin{longtable}{llllll}
+% zde vlozime soubor jmeno.tex
+veh\_body & veh\_age & gender & area & agecat & count(id) \\ \hline
+\input{data/tabulka1.tex}
+\end{longtable}
+
+\begin{longtable}{llllll}
+% zde vlozime soubor jmeno.tex
+veh\_body & veh\_age & gender & area & agecat & sum(numclaims) \\ \hline
+\input{data/tabulka2.tex}
+\end{longtable}
+
+\end{document}
