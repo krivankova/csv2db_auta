@@ -62,7 +62,12 @@ def db_connect():
   """
   Return connection handler to the 'testdb' database
   """
-  return  MySQLdb.connect('localhost', 'testuser', 'test623', 'testdb');
+  import socket
+  if socket.gethostname()==bart:
+    import MySQLdb_bart
+    return  MySQLdb_bart.connect()
+  else:
+    return  MySQLdb.connect('localhost', 'testuser', 'test623', 'testdb');
 
 def db_select(_table, _prn=True):
   """
