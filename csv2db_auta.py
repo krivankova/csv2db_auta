@@ -145,7 +145,8 @@ def db_select2():
               if res[0][1]:
                 ratio = round ( res[0][0] / res[0][1] * 100, 1 )
                 out_cl.append(int(round(float(res[0][0]))))
-                out_ex.append(int(round(float(res[0][1]))))
+                #out_ex.append(int(round(float(res[0][1]))))  # Exposure rounded to integer
+                out_ex.append(float(res[0][1]))
               else:
                 out_cl.append('N')
                 out_ex.append('N')
